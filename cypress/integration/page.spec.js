@@ -38,7 +38,7 @@ describe('Page', () => {
 
   it('should show age for Misha and Olya but not for Alex', () => {
     cy.get('.Person').eq(0).find('.Person__age').should('have.text', 'I am 37');
-    cy.get('.Person').eq(1).find('.Person__age').should('have.text', 'I am 25');
-    cy.get('.Person').eq(2).find('.Person__age').should('not.exist');
+    cy.get('.Person').eq(1).find('.Person__age').should('not.exist');
+    cy.get('.Person').eq(2).find('.Person__age').should('have.text', 'I am 25');
   });
 });
